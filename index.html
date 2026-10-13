@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhrajit Nath — Portfolio</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, sans-serif; background-color: #0f172a; color: #f8fafc; line-height: 1.6; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 2rem; background-color: #1e293b; position: sticky; top: 0; z-index: 100; }
+        .logo { font-weight: bold; font-size: 1.25rem; color: #38bdf8; }
+        .nav-links { list-style: none; display: flex; gap: 1.5rem; }
+        .nav-links a { text-decoration: none; color: #cbd5e1; transition: color 0.2s ease; }
+        .nav-links a:hover { color: #38bdf8; }
+        section { padding: 4rem 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+        h2 { font-size: 2rem; margin-bottom: 1rem; color: #38bdf8; }
+        .hero { padding: 6rem 2rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .hero h2 { font-size: 1.25rem; color: #94a3b8; margin-bottom: 1rem; }
+        .hero p { font-size: 1.1rem; margin-bottom: 2rem; color: #cbd5e1; }
+        .btn { display: inline-block; padding: 0.75rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: transform 0.2s ease, background-color 0.2s ease; cursor: pointer; border: none; font-size: 1rem; }
+        .btn.primary { background-color: #38bdf8; color: #0f172a; }
+        .btn.primary:hover { background-color: #0ea5e9; transform: translateY(-2px); }
+        .skills-container { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .skill-card { background-color: #1e293b; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 500; border: 1px solid #334155; transition: transform 0.2s ease; }
+        .skill-card:hover { transform: translateY(-4px); border-color: #38bdf8; }
+        .projects-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; }
+        @media (min-width: 768px) { .projects-grid { grid-template-columns: 1fr 1fr; } }
+        .project-card { background-color: #1e293b; padding: 1.5rem; border-radius: 8px; border: 1px solid #334155; text-align: left; }
+        .project-card h3 { color: #f8fafc; margin-bottom: 0.5rem; }
+        .project-card p { color: #94a3b8; font-size: 0.95rem; margin-bottom: 1rem; }
+        .project-tech { font-size: 0.85rem; color: #38bdf8; margin-bottom: 1.5rem; font-weight: bold; }
+        .project-links { display: flex; gap: 1rem; }
+        .about p, .contact p { color: #94a3b8; margin-bottom: 1rem; }
+        footer { text-align: center; padding: 2rem; background-color: #1e293b; color: #64748b; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">AN</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <h1>Hi, I'm Abhrajit Nath </h1>
+            <h2>First-Year Computer Science Student | Aspiring Entrepreneur</h2>
+            <p>Passionate about technology, AI, chess, and building practical products.</p>
+        </section>
+
+        <section id="about" class="about">
+            <h2>About Me</h2>
+            <p>I am a first-year Computer Science student at <strong>Scaler School of Technology</strong> and pursuing my BSc in CS from <strong>BITS Pilani</strong> (Expected Graduation: 2030).</p>
+            <p>When I'm not programming or exploring AI and web development, you can find me playing state-level chess, debating, or brainstorming entrepreneurial ideas.</p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>What I'm Learning</h2>
+            <div class="skills-container">
+                <div class="skill-card">Java</div>
+                <div class="skill-card">Python</div>
+                <div class="skill-card">HTML</div>
+                <div class="skill-card">CSS</div>
+                <div class="skill-card">Problem Solving</div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <h3>Basic Calculator</h3>
+                    <p>A functional, clean calculator app built to demonstrate UI layout and basic mathematics logic.</p>
+                    <div class="project-tech">HTML • CSS • JavaScript</div>
+                    <div class="project-links">
+                        <a href="calculator.html" target="_blank" class="btn primary">Live Demo</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Tic-Tac-Toe</h3>
+                    <p>A classic Tic-Tac-Toe web game featuring a responsive grid and win-detection logic.</p>
+                    <div class="project-tech">HTML • CSS • JavaScript</div>
+                    <div class="project-links">
+                        <a href="tictactoe.html" target="_blank" class="btn primary">Live Demo</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Let's Connect</h2>
+            <p>Interested in collaborating, tech, or a game of chess? Reach out!</p>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=abhrajit.ktps@gmail.com" target="_blank" class="btn primary">Send Email</a>
+        </section>
+    </main>
+
+    <footer>
+        <p> 2026 Abhrajit Nath. Built with HTML & CSS </p>
+    </footer>
+
+</body>
+</html>
